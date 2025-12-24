@@ -18,6 +18,9 @@ app.use(express.json());
 connectDB();
 
 app.use("/auth",require("./routes/auth"))
+app.use("/groups",require("./routes/group"))
+app.use("/expenses",require("./routes/expense"))
+app.use("/balance",require("./routes/balance"))
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("Server running");
